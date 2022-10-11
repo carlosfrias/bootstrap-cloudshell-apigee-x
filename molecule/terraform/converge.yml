@@ -1,0 +1,23 @@
+---
+- name: Create Apigee runtime on GCP
+  hosts: localhost
+  connection: local
+
+  vars_files:
+  - ~/.apigee-secure/argolis-credentials.yml
+  - "{{ playbook_dir | dirname | dirname }}/override.yml"
+  - "{{ playbook_dir | dirname }}/shared/defaults.yml"
+
+  collections:
+  - bap_coe.bootstrap_runtime
+  - bap_coe.gcp_management
+
+  roles:
+    - { role: terraform_installer }
+    - { role: service_account_file_path }
+    - { role: service_account_file_processing }
+    - { role: gcp_auth_service_account_activate }
+    - { role: terraform_init }
+    - { role: terraform_plan }
+    - { role: terraform_apply }
+
