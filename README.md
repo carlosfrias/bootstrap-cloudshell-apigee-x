@@ -1,6 +1,6 @@
 # Bootstrap Apigee X    
 
-[![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://shell.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/carlosfrias/bootstrap-cloudshell-apigee-x.git
+[![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://shell.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/carlosfrias/bootstrap-cloudshell-apigee-x.git)
 This Cloud Shell instance will allow you to provision and de-provision a GCP project. You
 would provide the project name and credentials and execute the build. The steps
 provided below would allow you to capture the downloaded service account credential 
