@@ -1,6 +1,9 @@
 ---
-PROJECT_ID: "CHANGEME"
-#FOLDER_DISPLAY_NAME: abm
+# Attributes to be set in override.yml
+TERRAFORM_PROJECT_NAME: x-l7xlb
+PROJECT_ID: "friasc-{{ TERRAFORM_PROJECT_NAME | split('-') | join('') }}-09012022-1221"
+TERRAFORM_VAR_FILE: x-demo.tfvars
+TERRAFORM_LOG: "DEBUG"
 WORK_DIR: "{{ playbook_dir | dirname | dirname }}/work_dir/{{ PROJECT_ID }}"
 
 GCLOUD_ORG_ROLE_BINDINGS:
