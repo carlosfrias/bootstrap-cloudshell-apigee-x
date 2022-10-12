@@ -109,8 +109,12 @@ The following instructions are to get started and quickly bring up a functional 
 Please note that the `FOLDER_DISPLAY_NAME` enables you to use a GCP folder under which to contain your project. 
 
        ---
-       PROJECT_ID: "friasc-runtime-MMDDYYYY_HHMM"
-       #FOLDER_DISPLAY_NAME: abm
+       # Attributes to be set in override.yml
+       TERRAFORM_PROJECT_NAME: x-l7xlb
+       PROJECT_ID: "friasc-{{ TERRAFORM_PROJECT_NAME | split('-') | join('') }}-09012022-1221"
+       TERRAFORM_VAR_FILE: x-demo.tfvars
+       TERRAFORM_LOG: "DEBUG"
+       WORK_DIR: "{{ playbook_dir | dirname | dirname }}/work_dir/{{ PROJECT_ID }}"
 
 
 8. Please review the default attributes provided `resources/defaults.yml` to validate that they work for your project. 
