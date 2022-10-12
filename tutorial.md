@@ -40,7 +40,7 @@ The steps needed include:
     ```
 
 ## Set your project name
-1. The project name is picked up from the <walkthrough-editor-select-regex filePath="/home/admin_/cloudshell_open/bootstrap-cloudshell-apigee-x/resources/override.yml" regex="CHANGEME">override.yml</walkthrough-editor-select-regex> file.
+1. The project name is picked up from the <walkthrough-editor-select-regex filePath="/home/admin_/cloudshell_open/bootstrap-cloudshell-apigee-x/resources/override.yml" regex="PROJECT_ID">override.yml</walkthrough-editor-select-regex> file.
 
 ## Update organization role bindings
 1. Please review default org role bindings. It is recommended that you update the default org role bindings in <walkthrough-editor-select-regex filePath="/home/admin_/cloudshell_open/bootstrap-cloudshell-apigee-x/resources/override.yml" regex="GCLOUD_ORG_ROLE_BINDINGS">override.yml</walkthrough-editor-select-regex> file.
