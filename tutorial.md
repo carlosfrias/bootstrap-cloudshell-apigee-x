@@ -22,13 +22,14 @@ The steps needed include:
     mkdir ~/.apigee-secure
     ```
 
-1. Use the provided credentials template file to create your credentials file in you secure credentials folder.
+2. Use the provided credentials template file to create your credentials file in you secure credentials folder.
+  Please note that the variables defined here will be used in `resources/override.yml`
 
     ```sh
     cp bootstrap-cloudshell-apigee-x/resources/credentials.yml.template  ~/.apigee-secure/credentials.yml
     ```
 
-1. Update your credentials file by replacing each `CHANGEME`. Assuming you followed the naming conventions in this tutorial then you can click
+4. Update your credentials file by replacing each `CHANGEME`. Assuming you followed the naming conventions in this tutorial then you can click
    <walkthrough-editor-select-regex filePath="/home/admin_/.apigee-secure/credentials.yml" regex="CHANGEME">credentials.yml</walkthrough-editor-select-regex> to start your updates.
 
     ```yaml
@@ -41,6 +42,9 @@ The steps needed include:
 
 ## Set your project name
 1. The project name is picked up from the <walkthrough-editor-select-regex filePath="/home/admin_/cloudshell_open/bootstrap-cloudshell-apigee-x/resources/override.yml" regex="PROJECT_ID">override.yml</walkthrough-editor-select-regex> file.
+
+## Name the Apigee X Terraform module 
+1. Please indicate the name of the Apigee X Terraform module you would like to deploy in the <walkthrough-editor-select-regex filePath="/home/admin_/cloudshell_open/bootstrap-cloudshell-apigee-x/resources/override.yml" regex="TERRAFORM_PROJECT_NAME">override.yml</walkthrough-editor-select-regex> file.
 
 ## Update organization role bindings
 1. Please review default org role bindings. It is recommended that you update the default org role bindings in <walkthrough-editor-select-regex filePath="/home/admin_/cloudshell_open/bootstrap-cloudshell-apigee-x/resources/override.yml" regex="GCLOUD_ORG_ROLE_BINDINGS">override.yml</walkthrough-editor-select-regex> file.
