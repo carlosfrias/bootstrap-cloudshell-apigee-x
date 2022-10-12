@@ -45,6 +45,16 @@ The steps needed include:
 
 ## Name the Apigee X Terraform module 
 1. Please indicate the name of the Apigee X Terraform module you would like to deploy in the <walkthrough-editor-select-regex filePath="/home/admin_/cloudshell_open/bootstrap-cloudshell-apigee-x/resources/override.yml" regex="TERRAFORM_PROJECT_NAME">override.yml</walkthrough-editor-select-regex> file.
+Please choose one of the following module names listed as follows:
+* x-basic
+* x-dns-peering
+* x-iac-pipeline
+* x-ilb-mtls
+* x-l7xlb
+* x-multi-region
+* x-sb-psc
+* x-shared-vpc
+* x-transitive-peering
 
 ## Update organization role bindings
 1. Please review default org role bindings. It is recommended that you update the default org role bindings in <walkthrough-editor-select-regex filePath="/home/admin_/cloudshell_open/bootstrap-cloudshell-apigee-x/resources/override.yml" regex="GCLOUD_ORG_ROLE_BINDINGS">override.yml</walkthrough-editor-select-regex> file.
