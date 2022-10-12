@@ -111,7 +111,7 @@ Please note that the `FOLDER_DISPLAY_NAME` enables you to use a GCP folder under
        ---
        # Attributes to be set in override.yml
        TERRAFORM_PROJECT_NAME: x-l7xlb
-       PROJECT_ID: "friasc-{{ TERRAFORM_PROJECT_NAME | split('-') | join('') }}-09012022-1221"
+       PROJECT_ID: "friasc-{{ TERRAFORM_PROJECT_NAME | split('-') | join('') }}-MMDDYYY-HHMM"
        TERRAFORM_VAR_FILE: x-demo.tfvars
        TERRAFORM_LOG: "DEBUG"
        WORK_DIR: "{{ playbook_dir | dirname | dirname }}/work_dir/{{ PROJECT_ID }}"
