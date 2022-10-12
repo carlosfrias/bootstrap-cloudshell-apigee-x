@@ -1,11 +1,10 @@
-# Bootstrap Apigee X    
+# Bootstrap Apigee X with Apigee Terraform modules  
 
 [![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://shell.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/carlosfrias/bootstrap-cloudshell-apigee-x.git&cloudshell_tutorial=tutorial.md)
 This Cloud Shell instance will allow you to provision and de-provision an Apigee X instance
-built using Terraform scripts. You
-would provide the project name, credentials, terraform project module name and execute the build. 
-The steps
-provided below would allow you to capture the downloaded service account credential 
+using [Apigee X Terraform modules](https://github.com/apigee/terraform-modules.git). It is 
+required that you provide the project name, credentials, terraform project module name and execute the build. 
+The steps provided below would allow you to capture the downloaded service account credential 
 files and any org policies that have been applied. This project manager uses 
 the `gcloud` cli. This has been implemented with Ansible and wrapped with the molecule framework. 
 

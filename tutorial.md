@@ -1,15 +1,18 @@
-## Introduction to Bootstrap Project Manager
+## Bootstrap Apigee X with the Apigee Terraform modules
 
-This purpose of this tutorial is to enable you to get stated quickly managing a
-GCP project. The steps needed include:
+The purpose of this tutorial is to enable you to get stated quickly bootstrap an
+instance of Apigee X using the Apigee Terraform modules in a GCP project. 
+The steps needed include:
 
 1. Configure your credentials.
 2. Set your project name.
-3. Update your organization policies and constraints.
-4. Enable your service apis.
-5. Create your service account.
-6. Obtain your service account key file.
-7. Update your service account permissions.
+3. Select the Terraform module to use
+4. Update your organization policies and constraints.
+5. Enable your service apis.
+6. Create your service account.
+7. Obtain your service account key file.
+8. Update your service account permissions.
+9. Invoke the build
 
 ## Configure your credentials
 
