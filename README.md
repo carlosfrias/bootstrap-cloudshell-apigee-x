@@ -1,6 +1,6 @@
 # Bootstrap Apigee X    
 
-[![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://shell.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/carlosfrias/bootstrap-cloudshell-apigee-x.git)
+[![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://shell.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/carlosfrias/bootstrap-cloudshell-apigee-x.git&cloudshell_tutorial=tutorial.md)
 This Cloud Shell instance will allow you to provision and de-provision an Apigee X instance
 built using Terraform scripts. You
 would provide the project name, credentials, terraform project module name and execute the build. 
