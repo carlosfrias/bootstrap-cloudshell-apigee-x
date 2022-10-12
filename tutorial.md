@@ -55,7 +55,7 @@ The steps needed include:
 1. Please review the default service apis that will be enabled in your project. Please update <walkthrough-editor-select-regex filePath="/home/admin_/cloudshell_open/bootstrap-cloudshell-apigee-x/resources/override.yml" regex="GCLOUD_PROJECT_SERVICES">override.yml</walkthrough-editor-select-regex> as needed.
 
 ## Service Account Creation
-1. Please review the service account that will be created in your project. Please update <walkthrough-editor-select-regex filePath="/home/admin_/cloudshell_open/bootstrap-cloudshell-apigee-x/resources/override.yml" regex="SERVICE_ACCOUNT_PROTECTED_VALUES in credentials.yml">override.yml</walkthrough-editor-select-regex> as needed.
+1. Please review the service account that will be created in your project. Please note that the variables here are pulled from the credentials.yml you configured in a previous step. Please update <walkthrough-editor-select-regex filePath="/home/admin_/cloudshell_open/bootstrap-cloudshell-apigee-x/resources/override.yml" regex="SERVICE_ACCOUNT_PROTECTED_VALUES in credentials.yml">override.yml</walkthrough-editor-select-regex> as needed.
 
 ## Review work directory location
 1. Please review and update the working directory location if needed <walkthrough-editor-select-regex filePath="/home/admin_/cloudshell_open/bootstrap-cloudshell-apigee-x/resources/override.yml" regex="WORK_DIR">override.yml</walkthrough-editor-select-regex>
