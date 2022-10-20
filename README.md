@@ -66,7 +66,7 @@ This can be applied to scenario invocations in the following way:
 
        molecule --debug -vvv converge -s provision-project
 
-#### Administrative Bits
+### Administrative Bits
 * A new copy of the project will be installed in the folder `~/cloudshell_open/bootstrap-cloudshell-apigee-x`. 
   Please navigate to this folder to work on your project.  
 * A new copy of the project will be installed each time the link above invoked. 
