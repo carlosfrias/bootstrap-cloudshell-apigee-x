@@ -26,7 +26,7 @@ The steps needed include:
   Please note that the variables defined here will be used in `resources/override.yml`
 
     ```sh
-    cp bootstrap-cloudshell-apigee-x/resources/credentials.yml.template  ~/.apigee-secure/credentials.yml
+    cp resources/credentials.yml.template  ~/.apigee-secure/credentials.yml
     ```
 
 4. Update your credentials file by replacing each `CHANGEME`. Assuming you followed the naming conventions in this tutorial then you can click
