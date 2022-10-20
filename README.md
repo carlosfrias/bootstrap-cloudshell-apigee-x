@@ -16,7 +16,7 @@ the `gcloud` cli. This has been implemented with Ansible and wrapped with the mo
 5. [Configurations and File System Setup](#configurations-and-file-system-setup)
 6. [Docker Usage](#docker-usage)
 
-# Bootstrap Project Manager Features
+# Project Features
 The features of this project will allow you to add or remove the following: 
 1. Create or destroy a project with the name provided, if it is available for your use.
 2. Apply organization policies or disable organization constraints. 
