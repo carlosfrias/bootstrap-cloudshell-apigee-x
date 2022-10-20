@@ -12,9 +12,6 @@ the `gcloud` cli. This has been implemented with Ansible and wrapped with the mo
 1. [Bootstrap Project Manager Features](#bootstrap-project-manager-features)
 2. [Bootstrap Project Manager Overview](#bootstrap-project-manager-overview)
 3. [Build Scenarios Description](#build-scenarios-descriptions)
-4. [Getting Started](#getting-started)
-5. [Configurations and File System Setup](#configurations-and-file-system-setup)
-6. [Docker Usage](#docker-usage)
 
 # Project Features
 The features of this project will allow you to add or remove the following: 
