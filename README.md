@@ -17,29 +17,27 @@ the `gcloud` cli. This has been implemented with Ansible and wrapped with the mo
 6. [Docker Usage](#docker-usage)
 
 # Bootstrap Project Manager Features
-The features of this bootstrap project manager will allow you to add or remove the following: 
+The features of this project will allow you to add or remove the following: 
 1. Create or destroy a project with the name provided, if it is available for your use.
 2. Apply organization policies or disable organization constraints. 
 3. Enable Service APIs.
 4. Create service account 
 5. Download service account keys
 6. Set service account permissions
+7. Create or remove an Apigee X instance 
 
-The architecture used you gain the ability to selectively invoke portions 
-of strictly bootstrapping a project in one invocation. The architecture used also 
-provides the ability to discreetly add, create and configure each step independently 
-of the others and thus enable you to manage the 6 different steps of project creation.  
+The framework used allows you to gain the ability to selectively invoke individual steps or 
+fully deploy an instance in one invocation. The framework enables you to discreetly 
+add, create and configure each step independently of the others and thus enable 
+you to manage the different steps of deploying an Apigee X instance.  
 
-# Bootstrap Project Manager Overview
-The Bootstrap Project Manager has categorized the creation of a GCP project into 6 steps. 
-These steps have been defined using molecule scenarios. The default molecule scenario executes 
-each of the six steps in sequence. It should be noted that each scenario can be invoked
-individually. So whether you invoke the default scenario or invoke each scenario individually 
-you will always be executing the same scripts for the corresponding step. 
-
-This is a project manager because it enables you to not only apply settings to a project but you can also 
-unapply those settings. This enables you to work to be very selective about the application of org policies
-and permissions in a project. 
+# Bootstrap Apigee X with Apigee Terraform modules Overview
+The creation of a GCP project has been broken down into 6 steps. The use of terraform adds an additional 
+2 steps. These steps have been defined using molecule scenarios. The default molecule scenario executes 
+each step in sequence and accomplishes an Apigee X deployment with Terraform in a single invocation. 
+Each scenario is invoked individually. This means that whether you invoke the default scenario or 
+invoke each scenario individually you will always be executing the same scripts for the corresponding step. 
+You obtain freedom to explore different areas of the Apigee X knowing that you can always reset to a known state.
 
 ## Build Scenarios Descriptions
 A default scenario has been defined as a master scenario that invokes each of the scenario steps until a GCP project is built. 
@@ -57,6 +55,8 @@ The 6 scenario have been defined as:
 | 4.                  | config-svc-accts-create      | `molecule converge -s config-svc-accts-create`     | Create service account                                                   |
 | 5.                  | config-svc-accts-keys        | `molecule converge -s config-svc-accts-keys`       | Download service account keys                                        |
 | 6.                  | config-svc-accts-permissions | `molecule converge -s config-svc-accts-permissions` | Set service account permissions                                   |
+| 7. | terraform-vars | `molecule converge -s terraform-vars` | Update terraform variables from those set in override.yml |
+| 8. | terraform | `molecule converge -s terraform` | Execute `terraform init`, `terraform fmt`, `terraform plan` and `terraform apply -auto-approve` |
 
 ### Invocations using Debug Mode
 All molecule scenarios can be invoked in debug mode with increased log verbosity. 

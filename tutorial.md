@@ -41,7 +41,7 @@ The steps needed include:
     ```
 
 ## Set your project name
-1. The project name is picked up from the <walkthrough-editor-select-regex filePath="/home/admin_/cloudshell_open/bootstrap-cloudshell-apigee-x/resources/override.yml" regex="PROJECT_ID">override.yml</walkthrough-editor-select-regex> file.
+1. The project name is picked up from the <walkthrough-editor-select-regex filePath="/home/admin_/cloudshell_open/bootstrap-cloudshell-apigee-x/resources/override.yml" regex="PROJECT_ID">override.yml</walkthrough-editor-select-regex> file. (Please note that this is not the Apigee X `overrides.yml` it is named to denote that it overrides default attributes found in `default.yml`.)
 
 ## Name the Apigee X Terraform module 
 1. Please indicate the name of the Apigee X Terraform module you would like to deploy in the <walkthrough-editor-select-regex filePath="/home/admin_/cloudshell_open/bootstrap-cloudshell-apigee-x/resources/override.yml" regex="TERRAFORM_PROJECT_NAME">override.yml</walkthrough-editor-select-regex> file.
