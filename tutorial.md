@@ -16,7 +16,10 @@ The steps needed include:
 
 ## Test file opening directives
 
-<walkthrough-editor-open-file filePath="./tutorial.md">Test open tutorial.md</walkthrough-editor-open-file>
+<walkthrough-editor-open-file 
+    filePath="./tutorial.md">
+    Test open tutorial.md
+</walkthrough-editor-open-file>
 
 ## Configure your credentials
 
