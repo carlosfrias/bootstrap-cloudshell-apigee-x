@@ -14,6 +14,10 @@ The steps needed include:
 8. Update your service account permissions.
 9. Invoke the build
 
+## Test file opening directives
+
+<walkthrough-editor-open-file filePath="tutorial.md">Test open tutorial.md</walkthrough-editor-open-file>
+
 ## Configure your credentials
 
 1. Create secure credentials folder such as suggested below. Please feel free to use your own naming convention.
@@ -30,7 +34,7 @@ The steps needed include:
     ```
 
 4. Update your credentials file by replacing each `CHANGEME`. Assuming you followed the naming conventions in this tutorial then you can click
-   <walkthrough-editor-select-regex filePath="../../../.apigee-secure/credentials.yml" regex="CHANGEME">credentials.yml</walkthrough-editor-select-regex> to start your updates.
+   <walkthrough-editor-select-regex filePath="../../../.apigee-secure/credentials.yml" regex="GCLOUD_ORG_ID">credentials.yml</walkthrough-editor-select-regex> to start your updates.
 
     ```yaml
         ---
