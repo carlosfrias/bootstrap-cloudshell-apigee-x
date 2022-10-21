@@ -17,7 +17,7 @@ The steps needed include:
 ## Test file opening directives
 
 <walkthrough-editor-open-file 
-    filePath="./tutorial.md">
+    filePath="bootstrap-cloudshell-apigee-x/tutorial.md">
     Test open tutorial.md
 </walkthrough-editor-open-file>
 
