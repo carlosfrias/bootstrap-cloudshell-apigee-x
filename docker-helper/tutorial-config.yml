@@ -1,0 +1,15 @@
+---
+- name: Configure tutorial.md file paths
+  hosts: localhost
+  connection: local
+  gather: false
+
+  vars:
+    HOME_DIR: "{{ '~' | expanduser }}"
+    WORK_DIR: "{{ playbook_dir | basename }}"
+
+  task:
+  - name: Update template paths
+    template:
+      src: "{{ playbook_dir }}/docker-helper/tutorial.md.j2"
+      dest: "{{ WORK_DIR }}/tutorial.md"
