@@ -14,13 +14,6 @@ The steps needed include:
 8. Update your service account permissions.
 9. Invoke the build
 
-## Test file opening directives
-
-<walkthrough-editor-open-file 
-    filePath="cloudshell_open/bootstrap-cloudshell-apigee-x/tutorial.md">
-    Test open tutorial.md
-</walkthrough-editor-open-file>
-
 ## Configure your credentials
 
 1. Create secure credentials folder such as suggested below. Please feel free to use your own naming convention.
