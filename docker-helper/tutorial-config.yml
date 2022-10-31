@@ -9,7 +9,20 @@
     WORK_DIR: "{{ playbook_dir | dirname }}"
 
   tasks:
+  - name: Show HOME_DIR
+    debug:
+      msg: "HOME_DIR: {{ HOME_DIR }}"
+
+  - name: Show WORK_DIR
+    debug:
+      msg: "WORK_DIR: {{ WORK_DIR }}"
+
+  - name: Show playbook_dir
+    debug:
+      msg: "WORK_DIR: {{ playbook_dir }}"
+
   - name: Update template paths
     template:
       src: "{{ playbook_dir }}/tutorial.md.j2"
       dest: "{{ WORK_DIR }}/tutorial.md"
+
