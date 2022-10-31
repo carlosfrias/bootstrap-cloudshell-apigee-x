@@ -6,5 +6,6 @@ COPY docker-helper /bootstrap-runtime/docker-helper/
 COPY resources /bootstrap-runtime/resources/
 RUN bash -l /bootstrap-runtime/docker-helper/docker-helper-activate-apigee.sh \
     && mkdir -p work_dir \
-    && chmod -R +w work_dir
+    && chmod -R +w work_dir \
+RUN ansible-playbook tutorial-config.yml
 ENTRYPOINT bash
