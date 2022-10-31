@@ -8,6 +8,6 @@ RUN bash -l /bootstrap-runtime/docker-helper/docker-helper-activate-apigee.sh \
     && mkdir -p work_dir \
     && chmod -R +w work_dir \
 WORKDIR /bootstrap-runtime/docker-helper
-RUN ansible-playbook tutorial-config.yml
+RUN ansible-playbook -vvvvv tutorial-config.yml
 
 ENTRYPOINT bash

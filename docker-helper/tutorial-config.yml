@@ -21,8 +21,50 @@
     debug:
       msg: "WORK_DIR: {{ playbook_dir }}"
 
+  - name: Found template
+    stat:
+      path: "{{ playbook_dir }}/tutorial.md.j2"
+    register: stat
+
+  - name: show template stat
+    debug:
+      msg: "template stat: {{ stat }}"
+
+  - name: found WORK_DIR
+    stat:
+      path: "{{ WORK_DIR }}"
+    register: stat
+
+  - name: show WORK_DIR stat
+    debug:
+      msg: "template stat: {{ stat }}"
+
   - name: Update template paths
     template:
       src: "{{ playbook_dir }}/tutorial.md.j2"
       dest: "{{ WORK_DIR }}/tutorial.md"
+      mode: 0644
+      force: yes
+    register: status
+
+  - name: update template report
+    debug:
+      msg: "update template report: {{ status }}"
+
+  - name: Show templated file
+    stat:
+      path: "{{ WORK_DIR }}/tutorial.md"
+    register: stat
+
+  - name: show templated file stat
+    debug:
+      msg: "template stat: {{ stat }}"
+
+  - name: Capture templated file contents
+    command: cat {{ WORK_DIR }}/tutorial.md
+    register: status
+
+  - name: Show templated file contents
+    debug:
+      msg: "Template file: {{ status }}"
 
