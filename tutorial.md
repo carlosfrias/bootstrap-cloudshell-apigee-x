@@ -89,6 +89,7 @@ Please choose one of the following module names listed as follows:
 
     ```sh
     cd ~/bootstrap-cloudshell-apigee-x/
+    gcloud auth login
     pyenv activate apigeex
     molecule converge
     ```
