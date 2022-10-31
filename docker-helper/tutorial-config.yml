@@ -17,9 +17,9 @@
     debug:
       msg: "WORK_DIR: {{ WORK_DIR }}"
 
-  - name: Show playbook_dir
+  - name: Show playbook_dir dirname
     debug:
-      msg: "playbook_dir: {{ playbook_dir }}"
+      msg: "playbook_dir: {{ playbook_dir | dirname}}"
 
   - name: Found template
     stat:
@@ -33,7 +33,7 @@
   - name: Update template paths
     template:
       src: "{{ playbook_dir }}/tutorial.md.j2"
-      dest: "{{ playbook_dir }}/tutorial.md"
+      dest: "{{ playbook_dir | dirname }}/tutorial.md"
       mode: 0644
       force: yes
     register: status
