@@ -84,7 +84,14 @@ Please choose one of the following module names listed as follows:
    for the service account role bindings.
 
 ## Activate the virtual environment and create the project
-1. Activate the python virtual environment to create the project.
+1. Login to gcloud if needed:
+
+
+    ```shell
+    gcloud auth login
+    ```
+
+2. Activate the python virtual environment to create the project.
 
 
     ```sh
