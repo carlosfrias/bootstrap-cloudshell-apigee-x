@@ -87,7 +87,7 @@ Please choose one of the following module names listed as follows:
 1. Login to gcloud if needed:
 
 
-    ```shell
+    ```sh
     gcloud auth login
     ```
 
