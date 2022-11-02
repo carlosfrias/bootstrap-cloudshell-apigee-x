@@ -8,11 +8,12 @@ RUN curl https://pyenv.run | bash \
     && echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc \
     && echo 'eval "$(pyenv init -)"' >> ~/.bashrc \
     && echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc \
-    && bash ~/.bashrc \
+    && bash -l ~/.bashrc \
     && ~/.pyenv/bin/pyenv install 3.10.2 \
     && ~/.pyenv/bin/pyenv global 3.10.2 \
     && ~/.pyenv/bin/pyenv virtualenv 3.10.2 apigee \
-    && bash -l ~/.bashrc
+    && bash -l ~/.bashrc \
+
 
 VOLUME /bootstrap-runtime
 WORKDIR /bootstrap-runtime
