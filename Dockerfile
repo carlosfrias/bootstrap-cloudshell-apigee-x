@@ -7,11 +7,10 @@ RUN sudo apt-get update -y \
     && echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc \
     && echo 'eval "$(pyenv init -)"' >> ~/.bashrc \
     && echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc \
-    && bash -l ~/.bashrc \
+    && bash -l \
     && ~/.pyenv/bin/pyenv install 3.10.2 \
     && ~/.pyenv/bin/pyenv global 3.10.2 \
-    && ~/.pyenv/bin/pyenv virtualenv 3.10.2 apigeex \
-    && bash -l ~/.bashrc
+    && ~/.pyenv/bin/pyenv virtualenv 3.10.2 apigeex 
 
 VOLUME /bootstrap-runtime
 WORKDIR /bootstrap-runtime
