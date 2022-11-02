@@ -1,9 +1,7 @@
-FROM gcr.io/cloudshell-images/cloudshell:latest as basic_bootstrap
+FROM gcr.io/cloudshell-images/cloudshell:latest
 RUN sudo apt-get update -y \
     && sudo apt-get install software-properties-common curl git mc vim facter aptitude apt-utils apt-transport-https ca-certificates gnupg -y
 
-
-FROM basic_bootstrap AS pyenv
 RUN curl https://pyenv.run | bash \
     && echo '' >> /root/.bashrc \
     && echo 'export PYENV_ROOT="/root/.pyenv"' >> /root/.bashrc \
@@ -16,8 +14,6 @@ RUN curl https://pyenv.run | bash \
     && /root/.pyenv/bin/pyenv virtualenv 3.10.2 apigee \
     && bash /root/.bashrc
 
-
-FROM pyenv
 VOLUME /bootstrap-runtime
 WORKDIR /bootstrap-runtime
 COPY molecule /bootstrap-runtime/molecule/
