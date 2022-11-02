@@ -25,6 +25,7 @@ The steps needed include:
 2. Use the provided credentials template file to create your credentials file in you secure credentials folder.
   Please note that the variables defined here will be used in `resources/override.yml`
 
+
     ```sh
     cp resources/credentials.yml.template  ~/.apigee-secure/credentials.yml
     vim ~/.apigee/credentials.yml
