@@ -18,6 +18,7 @@ The steps needed include:
 
 1. Create secure credentials folder such as suggested below. Please feel free to use your own naming convention.
 
+
     ```sh
     mkdir ~/.apigee-secure
     ```

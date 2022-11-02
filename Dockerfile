@@ -1,6 +1,6 @@
 FROM gcr.io/cloudshell-images/cloudshell:latest
 RUN sudo apt-get update -y \
-    && sudo apt-get install software-properties-common curl git mc vim facter aptitude apt-utils apt-transport-https ca-certificates gnupg -y \
+    && sudo apt-get install software-properties-common curl git mc vim facter aptitude apt-utils apt-transport-https ca-certificates gnupg tree -y \
     && curl https://pyenv.run | bash \
     && echo '' >> ~/.bashrc \
     && echo 'export PYENV_ROOT="~/.pyenv"' >> ~/.bashrc \
