@@ -28,7 +28,7 @@ The steps needed include:
 
     ```sh
     cp resources/credentials.yml.template  ~/.apigee-secure/credentials.yml
-    vim ~/.apigee/credentials.yml
+    vim ~/.apigee-secure/credentials.yml
     ```
 
 4. Update your credentials file by replacing each `CHANGEME`. Assuming you followed the naming conventions in this tutorial then you can click
