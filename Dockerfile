@@ -1,4 +1,4 @@
-FROM gcr.io/cloudshell-images/cloudshell:latest
+FROM gcr.io/cloudshell-images/cloudshell:cloud-shell-v20220130-000053
 RUN sudo apt-get update -y \
     && sudo apt-get install software-properties-common curl git mc vim facter aptitude apt-utils apt-transport-https ca-certificates gnupg tree -y
 
