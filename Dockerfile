@@ -10,7 +10,7 @@ RUN sudo apt-get update -y \
     && bash -l \
     && ~/.pyenv/bin/pyenv install 3.10.2 \
     && ~/.pyenv/bin/pyenv global 3.10.2 \
-    && ~/.pyenv/bin/pyenv virtualenv 3.10.2 apigeex 
+    && ~/.pyenv/bin/pyenv virtualenv 3.10.2 apigeex
 
 VOLUME /bootstrap-runtime
 WORKDIR /bootstrap-runtime
