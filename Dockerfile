@@ -1,26 +1,21 @@
 FROM gcr.io/cloudshell-images/cloudshell:cloud-shell-v20220130-000053
-RUN sudo apt-get update -y \
-    && sudo apt-get install software-properties-common curl git mc vim facter aptitude apt-utils apt-transport-https ca-certificates gnupg tree -y
+RUN apt-get update -y \
+    && apt-get install software-properties-common curl git mc vim facter aptitude apt-utils apt-transport-https ca-certificates gnupg tree -y
+RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+RUN curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
+RUN apt-get update -y \
+    && apt-get install google-cloud-sdk -y
 
-RUN curl https://pyenv.run | bash \
-    && echo '' >> ~/.bashrc \
-    && echo 'export PYENV_ROOT="~/.pyenv"' >> ~/.bashrc \
-    && echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc \
-    && echo 'eval "$(pyenv init -)"' >> ~/.bashrc \
-    && echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
 
-RUN bash -l \
-    && ~/.pyenv/bin/pyenv install 3.10.2 \
-    && ~/.pyenv/bin/pyenv global 3.10.2 \
-    && ~/.pyenv/bin/pyenv virtualenv 3.10.2 apigeex
-
+FROM python_core
 VOLUME /bootstrap-runtime
 WORKDIR /bootstrap-runtime
 COPY molecule /bootstrap-runtime/molecule/
 COPY docker-helper /bootstrap-runtime/docker-helper/
 COPY resources /bootstrap-runtime/resources/
-RUN bash -l /bootstrap-runtime/docker-helper/docker-helper-activate-apigee.sh \
-    && mkdir -p work_dir \
+RUN mkdir -p ~/.apigee-secure \
+    && cp /bootstrap-runtime/resources/credentials.yml.template ~/.apigee-secure/credentials.yml
+RUN mkdir -p work_dir \
     && chmod -R +w work_dir\
     && pip install -r docker-helper/docker-helper-requirements.txt
 
